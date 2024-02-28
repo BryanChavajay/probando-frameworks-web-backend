@@ -10,10 +10,6 @@
 
 1. Clona el repositorio:
 
-    ```bash
-    git clone <URL_DEL_REPOSITORIO>
-    ```
-
 2. Navega a la carpeta del proyecto:
 
     ```bash
