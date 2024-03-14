@@ -42,10 +42,10 @@
    cd db
    ```
 
-   En el archivo **db.py** encontrarás la constante **SQLALCHEMY_DATABASE_URL** aca debes pegar la url de conexión con tu base de datos. Remplaza las variables <CONTRASEÑA> <HOST> <PUERTO> <NOMBRE_BASE_DE_DATOS>
+   En el archivo **db.py** encontrarás la constante **SQLALCHEMY_DATABASE_URL** aca debes pegar la url de conexión con tu base de datos. Remplaza las variables **CONTRASEÑA**, **HOST**, **PUERTO** y **NOMBRE_BASE_DE_DATOS**
    ```python
    SQLALCHEMY_DATABASE_URL = (
-    "postgresql://postgres:<CONTRASEÑA>@<HOST>:<PUERTO>/<NOMBRE_BASE_DE_DATOS>"
+    "postgresql://postgres:CONTRASEÑA@HOST:PUERTO/NOMBRE_BASE_DE_DATOS"
    )
    ```
 
