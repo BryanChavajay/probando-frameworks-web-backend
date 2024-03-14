@@ -1,4 +1,33 @@
-# Ignorar archivos de Python
+# IGNORANDO ARCHIVOS DE PYTHON
 venv
 __pycache__
+
+# IGNORANDO ARCHIVOS DE C#
+# Binarios y archivos de salida generados por compilación
+bin/
+obj/
+# Archivos de usuario de Visual Studio
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+# Carpeta de archivos de caché de ReSharper
+_ReSharper*/
+# Carpeta de archivos de caché de Rider
+.idea/
+# Carpeta de archivos de caché de dotnet
+*.dotnet/
+# Carpeta de archivos de caché de NuGet
+*.nuget/
+# Archivos de compilación de MSBuild
+*.Cache
+*.log
+# Carpeta temporal creada por Rider
+rider/
+# Carpeta temporal creada por dotnet test
+TestResults/
+
+# Ignorar otros archivos
 .vscode
+

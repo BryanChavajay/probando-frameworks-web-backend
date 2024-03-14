@@ -36,13 +36,26 @@
     pip install -r requirements.txt
     ```
 
-5. Ejecuta el servidor con el siguiente comando:
+5. Configuración de la cadena de conexión a la base de datos
+   Para configurar la cadena de conexión debes dirigirte a la carpeta db
+   ```bash
+   cd db
+   ```
+
+   En el archivo **db.py** encontrarás la constante **SQLALCHEMY_DATABASE_URL** aca debes pegar la url de conexión con tu base de datos. Remplaza las variables <CONTRASEÑA> <HOST> <PUERTO> <NOMBRE_BASE_DE_DATOS>
+   ```python
+   SQLALCHEMY_DATABASE_URL = (
+    "postgresql://postgres:<CONTRASEÑA>@<HOST>:<PUERTO>/<NOMBRE_BASE_DE_DATOS>"
+   )
+   ```
+
+6. Ejecuta el servidor con el siguiente comando:
 
     ```bash
     uvicorn main:app --reload --port 8081
     ```
 
-6. Una vez iniciado el servidor, puedes acceder a la documentación interactiva en [http://localhost:8081/docs](http://localhost:8081/docs) o a la documentación adicional en [http://localhost:8081/redoc](http://localhost:8081/redoc).
+7. Una vez iniciado el servidor, puedes acceder a la documentación interactiva en [http://localhost:8081/docs](http://localhost:8081/docs) o a la documentación adicional en [http://localhost:8081/redoc](http://localhost:8081/redoc).
 
 ## Notas Importantes
 
