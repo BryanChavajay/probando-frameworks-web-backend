@@ -1,5 +1,5 @@
 # IGNORANDO ARCHIVOS DE PYTHON
-venv
+venv/
 __pycache__
 
 # IGNORANDO ARCHIVOS DE C#
@@ -27,6 +27,9 @@ _ReSharper*/
 rider/
 # Carpeta temporal creada por dotnet test
 TestResults/
+
+# Ignorar los archivos de NODE
+node_modules/
 
 # Ignorar otros archivos
 .vscode

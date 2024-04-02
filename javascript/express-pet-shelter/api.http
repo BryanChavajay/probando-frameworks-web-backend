@@ -1,0 +1,140 @@
+### Ruta para ver a todos los adoptadores registrados
+GET http://localhost:1234/adopters/
+Authorization: Bearer <token>
+
+### Ruta para buscar a un adoptador por su id
+GET http://localhost:1234/adopters/11
+Authorization: Bearer <token>
+
+### Ruta para registrar a un nuevo adoptador
+POST http://localhost:1234/adopters/
+Authorization: Bearer <token>
+Content-Type: application/json
+
+{
+    "name": "Pepito random",
+    "direction": "Ciudad de Guatemal",
+    "phone": "12345678",
+    "email": "pepito@gmail.com"
+}
+
+### Ruta para actualizar los datos del adoptador, se envia el id del adoptador en la ruta
+### No es necesario pasar todas las propiedades, puedes pasar solo las que quieras actualizar
+PATCH http://localhost:1234/adopters/11
+Authorization: Bearer <token>
+Content-Type: application/json
+
+{
+    "name": "Pepito Random",
+    "direction": "Ciudad de Guatemal",
+    "phone": "87654321",
+    "email": "pepitoramdom@gmail.com"
+}
+
+### Ruta para ver todas las adopciones registradas
+GET http://localhost:1234/adoptions/
+Authorization: Bearer <token>
+
+### Ruta para traer una adopción por su id
+GET http://localhost:1234/adoptions/1
+Authorization: Bearer <token>
+
+### Ruta para registrar una nueva adopción
+POST http://localhost:1234/adoptions/
+Authorization: Bearer <token>
+Content-Type: application/json
+
+{
+    "petId": 5,
+    "adopterId": 2,
+    "adoptionDate": "2024-03-24",
+    "userId": 1,
+    "observations": "Adoptador a otro"
+}
+
+### Ruta para obtener a todas las mascotas registradas
+GET http://localhost:1234/pets/
+Authorization: Bearer <token>
+
+### Ruta para obtener una mascota por su di
+GET http://localhost:1234/pets/5
+Authorization: Bearer <token>
+
+### Ruta para registrar a una nueva mascota
+POST http://localhost:1234/pets/
+Authorization: Bearer <token>
+Content-Type: application/json
+
+{
+    "name": "Mocha",
+    "birthday": "2020-08-15",
+    "typePet": 1,
+    "typeBreed": 1,
+    "dateAdmission": "2024-03-25",
+    "observations": null
+}
+
+### Ruta para actualizar los datos de una mascota, se envia el id de la mascota en la ruta
+### No es necesario pasar todas las propiedades, puedes pasar solo las que quieras actualizar
+PATCH  http://localhost:1234/pets/9
+Authorization: Bearer <token>
+Content-Type: application/json
+
+{
+    "name": "MOCHA",
+    "birthday": "2021-08-15",
+    "typePet": 1,
+    "typeBreed": 1,
+    "dateAdmission": "2023-03-25",
+    "observations": "Es muy tierna"
+}
+
+### Ruta para traer a todos los usuarios
+GET http://localhost:1234/users/
+Authorization: Bearer <token>
+
+### Ruta para traer a un usuario por su id
+GET http://localhost:1234/users/3
+Authorization: Bearer <token>
+
+### Ruta para registrar a un nuevo usuario
+POST http://localhost:1234/users/
+Authorization: Bearer <token>
+Content-Type: application/json
+
+{
+    "firstName": "Mario",
+    "secondName": null,
+    "othersNames": null,
+    "firstLastname": "Delgado",
+    "secondLastName": null,
+    "user": "mdelgado",
+    "email": "mdelgado@gmail.com",
+    "password": "Admin1234"
+}
+
+### Ruta para actualizar los datos de un usuario, se envia el id del usuario en la ruta
+### No es necesario pasar todas las propiedades, puedes pasar solo las que quieras actualizar
+PATCH  http://localhost:1234/users/28
+Authorization: Bearer <token>
+Content-Type: application/json
+
+{
+    "firstName": "Mario",
+    "secondName": "Arnoldo",
+    "othersNames": null,
+    "firstLastname": "Delgado",
+    "secondLastName": null,
+    "user": "mdelgado",
+    "email": "mdelgado@gmail.com",
+    "password": "Contraseña"
+}
+
+### Ruta para obtener el token para autenticarnos
+POST http://localhost:1234/auth/
+Content-Type: application/json
+
+{
+    "username": "johndoe",
+    "password": "Admin1234"
+}
